@@ -4,9 +4,19 @@ import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentOption
 import { StackNavigator } from './StackNavigator';
 import { SettingsScreens } from '../screens/SettingsScreens';
 import { styles } from '../theme/appTheme';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 const Drawer = createDrawerNavigator();
+
+// const Stack = createStackNavigator();
+// const SettingsStackScreen = () => {
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen name="SettingsScreens" component={ SettingsScreens } />
+//     </Stack.Navigator>
+//   )
+// }
 
 export const  MenuLateral = () => {
 
@@ -20,6 +30,11 @@ export const  MenuLateral = () => {
     </Drawer.Navigator>
   );
 }
+
+
+
+
+
 
 const MenuInterno = ( {navigation} :  DrawerContentComponentProps<DrawerContentOptions>) => {
 

@@ -27,7 +27,7 @@ export const Pagina1Screen = ( { navigation }: Props ) => {
 
             <Button title="Ir a página 2" onPress={() => navigation.navigate('Pagina2Screen') } />
     
-            <Text >Navegar con argumentos</Text>
+            <Text  style={{ marginVertical: 20, fontSize: 20 }}>Navegar con argumentos</Text>
 
             <View style={{ flexDirection: 'row' }}>
                 <TouchableOpacity style={{ ...styles.btonGrande, backgroundColor: '#5856D6' }} onPress={() => navigation.navigate('PersonaScreen', {
