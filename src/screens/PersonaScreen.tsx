@@ -1,19 +1,27 @@
 import React, { useEffect } from 'react'
-import { Button, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import { styles } from '../theme/appTheme';
 import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParams } from '../navigator/StackNavigator';
 
-interface Props extends StackScreenProps<any, any>{};
+// interface RouterParams {
+//     id: number; 
+//     nombre: string
+// }
+
+interface Props extends StackScreenProps<RootStackParams, 'PersonaScreen'>{};
 
 
 export const PersonaScreen = ( { route, navigation }: Props ) => {
 
+    // const params = route.params as RouterParams;
     const params = route.params;
 
     useEffect(() => {
         
         navigation.setOptions({
-            title: params!.nombre  //! sirve para forsar la llamada de datos
+            // title: params!.nombre  //! sirve para forsar la llamada de datos
+            title: params.nombre
         })
 
     }, [])
