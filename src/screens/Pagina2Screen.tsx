@@ -11,7 +11,7 @@ export const Pagina2Screen = () => {
     useEffect(() => {
         navigator.setOptions({
             title: 'Hola Mundo', //Este tiene más peso que la propiedad title de StackNavigator
-            headerBackTitle: 'Atrás'
+            headerBackTitle: 'Atrás' //Para que en IOS aparezca Atrás reemplazando el nombre de la página
         })
     }, [])
 
