@@ -3,6 +3,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { ChatScreen } from '../screens/ChatScreen';
 import { ContactsScreen } from '../screens/ContactsScreen';
 import { AlbumsScreen } from '../screens/AlbumsScreen';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 // Para ocultar el warning que sale por reanimated
 import { LogBox, Text } from 'react-native';
@@ -39,18 +40,18 @@ export const TopTapNavigator = () => {
               let iconName: string = '';
               switch( route.name ) {
                 case 'Chat':
-                  iconName='Ch'
+                  iconName='chatbubbles-outline'
                 break;
     
                 case 'Contacts':
-                  iconName='Co'
+                  iconName='call-outline'
                 break;
     
                 case 'Albums':
-                  iconName='Al'
+                  iconName='aperture-outline'
                 break;
               }
-              return <Text style={{ color }}>{ iconName }</Text>
+              return <Text> <Icon name={ iconName } size={20} color={ colores.primary } /></Text>
             }
           })}
     >

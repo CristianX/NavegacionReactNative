@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Image, Text, useWindowDimensions, View, TouchableOpacity } from 'react-native';
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentOptions, DrawerContentScrollView } from '@react-navigation/drawer';
 // import { StackNavigator } from './StackNavigator';
@@ -53,12 +54,14 @@ const MenuInterno = ( {navigation} :  DrawerContentComponentProps<DrawerContentO
       {/* Opciones de meú */}
       <View style={styles.menuContainer}>
 
-        <TouchableOpacity style={styles.menuBoton } onPress={ () => navigation.navigate('Tabs') } >
-          <Text style={ styles.menuTexto }>Navegación</Text>
+        <TouchableOpacity style={{ ...styles.menuBoton, flexDirection: 'row' }} onPress={ () => navigation.navigate('Tabs') } >
+          <Icon name='navigate-circle-outline' size={23} color= 'black' />
+          <Text style={ styles.menuTexto }> Navegación</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuBoton } onPress={ () => navigation.navigate('SettingsScreens') } >
-          <Text style={ styles.menuTexto }>Ajustes</Text>
+        <TouchableOpacity style={{ ...styles.menuBoton, flexDirection: 'row' }} onPress={ () => navigation.navigate('SettingsScreens') } >
+          <Icon name='cog-outline' size={23} color= 'black' />
+          <Text style={ styles.menuTexto }> Ajustes</Text>
         </TouchableOpacity>
 
       </View>
