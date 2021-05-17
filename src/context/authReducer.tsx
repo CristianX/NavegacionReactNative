@@ -5,6 +5,7 @@ type AuthAction =
     | { type: 'signIn' }
     | {type: 'changeFavIcon', payload: string }
     | { type: 'logout' }
+    | { type: 'changeUsername', payload: string }
 
 // generaEstado
 export const authReducer = ( state: AuthState, action: AuthAction ): AuthState => {  //Siempre ser de tipado del estado inicial
@@ -30,6 +31,12 @@ export const authReducer = ( state: AuthState, action: AuthAction ): AuthState =
                 isLoggedIn: false,
                 userName: undefined,
                 favoriteIcon: undefined
+            }
+
+        case 'changeUsername' :
+            return {
+                ...state,
+                userName: action.payload
             }
     
         default:
